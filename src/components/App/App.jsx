@@ -1,6 +1,13 @@
 import React from 'react';
+import Menu from '../Menu/Menu';
+import Gameboard from '../Gameboard/Gameboard';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <Menu />
+      <Gameboard />
+    </>
+  );
 }
   
