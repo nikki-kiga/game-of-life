@@ -1,14 +1,19 @@
 import React from 'react';
-import Board from './Board';
-import { useBoard } from '../../hooks/gameContext';
+import Menu from '../Menu/Menu';
+import Grid from './Grid';
 
 const Gameboard = () => {
 
-  const board = useBoard();
 
   return (
-    <Board data={board}/>
+    <>
+      <Menu/>
+      <Grid/>
+    </>
+
   );
 };
+
+
 
 export default Gameboard;
