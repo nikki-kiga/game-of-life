@@ -1,0 +1,17 @@
+button {
+    outline: none;
+} 
+.alive {
+    background: aqua;
+}
+
+.cell {
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.cell:hover,
+.cell:focus {
+    background: aquamarine;
+}
+
