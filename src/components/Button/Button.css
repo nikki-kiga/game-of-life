@@ -1,0 +1,16 @@
+button {
+    border-style: solid;
+}
+
+.menuButton {
+    background-color: none;
+    border-color: grey;
+    border-radius: 0.1rem;
+    margin: 0.15rem;
+}
+
+.menuButton:hover,
+.menuButton:focus {
+    border-color: none;
+    background-attachment: grey;
+}

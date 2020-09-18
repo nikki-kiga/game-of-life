@@ -1,0 +1,10 @@
+/* .gameboard {
+    display: 'grid';
+    gridTemplateColumns: repeat(50, 1.5rem);
+} */
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(50, 1.5rem);
+    grid-template-rows: repeat(40, 1.5rem);
+}
