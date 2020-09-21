@@ -1,9 +1,10 @@
-//References code from Ben Awad React Hooks Game of Life
+//References code from Ben Awad React Hooks Game of Life with a redux twist
 
 import React, { useCallback, useRef } from 'react';
 import Button from '../Button/Button';
 import { useSelector, useDispatch } from 'react-redux';
 import { getGameStatus, getRows, getCols, getGrid } from '../../gameSelectors';
+const cloneDeep = require('lodash.clonedeep');
 
 const Menu = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,6 @@ const Menu = () => {
   const rows = useSelector(getRows);
   const cols = useSelector(getCols);
   const running = useSelector(getGameStatus);
-
 
   const runningRef = useRef(running);
   runningRef.current = running;
@@ -48,6 +48,7 @@ const Menu = () => {
     if(!runningRef.current){
       return;
     }
+    let temp = cloneDeep(gridRef.current);
     for(let i = 0; i < rows; i++) {
       for(let j = 0; j < cols; j++) {
         let neighbors = 0;
@@ -55,17 +56,18 @@ const Menu = () => {
           const neighborI = i + x;
           const neighborJ = j + y;
           if(neighborI >= 0 && neighborI < rows && neighborJ >= 0 && neighborJ < cols) {
-            neighbors += gridRef.current[neighborI][neighborJ];
+            neighbors += (gridRef.current[neighborI][neighborJ] > 1 ? 1 : 0);
           }
         });
         if(neighbors < 2 || neighbors > 3) {
-          dispatch({ type: 'CELL_CYCLE', i, j, value: 0 });
+          temp[i][j] > 1 ? temp[i][j] = 1 : temp[i][j] = 0;
         } else if(grid[i][j] === 0 && neighbors === 3) {
-          dispatch({ type: 'CELL_CYCLE', i, j, value: 1 });
+          temp[i][j] = 2;
         }
       }
     }
-    setTimeout(runSimulation, 1000);
+    dispatch({ type: 'GRID_CYCLE', grid: temp });
+    setTimeout(runSimulation, 200);
   }, []);
 
   return (

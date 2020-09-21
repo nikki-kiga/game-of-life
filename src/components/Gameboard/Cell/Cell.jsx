@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './Cell.css';
 
 function Cell({ alive, onClick, i, j }) {
-  const aliveStyle = alive ? styles.alive : '';
+  const aliveStyle = alive > 0 ? alive > 1 ? styles.born : styles.alive : '';
 
   return (
     <button
@@ -16,7 +16,7 @@ function Cell({ alive, onClick, i, j }) {
 }
 
 Cell.propTypes = {
-  alive : PropTypes.bool,
+  alive : PropTypes.number,
   onClick : PropTypes.func,
   i: PropTypes.number,
   j: PropTypes.number
