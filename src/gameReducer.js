@@ -12,8 +12,8 @@ export const reducer = createReducer(initialState, builder => {
     .addCase('ACTIVATE_CELL', (state, action) => {
       state.grid[action.i][action.j] = state.grid[action.i][action.j] ? 0 : 1;
     })
-    .addCase('CELL_CYCLE', (state, action) => {
-      state.grid[action.i][action.j] = action.value;
+    .addCase('GRID_CYCLE', (state, action) => {
+      state.grid = action.grid;
     })
     .addCase('START_STOP', (state, action) => {
       state.live = action.value;
