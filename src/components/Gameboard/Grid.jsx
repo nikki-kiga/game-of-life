@@ -20,7 +20,7 @@ const Grid = () => {
     rows.map((col, j) => 
       <Cell 
         key={`${i}-${j}`}
-        alive={grid[i][j] ? true : false}
+        alive={grid[i][j]}
         onClick={handleClick}
         i={i}
         j={j}

@@ -56,18 +56,18 @@ const Menu = () => {
           const neighborI = i + x;
           const neighborJ = j + y;
           if(neighborI >= 0 && neighborI < rows && neighborJ >= 0 && neighborJ < cols) {
-            neighbors += gridRef.current[neighborI][neighborJ];
+            neighbors += (gridRef.current[neighborI][neighborJ] > 1 ? 1 : 0);
           }
         });
         if(neighbors < 2 || neighbors > 3) {
-          temp[i][j] = 0;
+          temp[i][j] > 1 ? temp[i][j] = 1 : temp[i][j] = 0;
         } else if(grid[i][j] === 0 && neighbors === 3) {
-          temp[i][j] = 1;
+          temp[i][j] = 2;
         }
       }
     }
     dispatch({ type: 'GRID_CYCLE', grid: temp });
-    setTimeout(runSimulation, 1000);
+    setTimeout(runSimulation, 200);
   }, []);
 
   return (

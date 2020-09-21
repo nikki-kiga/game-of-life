@@ -1,8 +1,12 @@
 button {
     outline: none;
+}
+.born {
+    background: #6dd9c1;
 } 
+
 .alive {
-    background: aqua;
+    background: #ffea85;
 }
 
 .cell {
@@ -12,6 +16,6 @@ button {
 
 .cell:hover,
 .cell:focus {
-    background: aquamarine;
+    background: #097287;
 }
 
