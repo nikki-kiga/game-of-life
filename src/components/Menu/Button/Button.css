@@ -3,7 +3,7 @@ button {
 }
 
 .menuButton {
-    background-color: none;
+    background-color: transparent;
     border-color: grey;
     border-radius: 0.1rem;
     margin: 0.15rem;
@@ -11,6 +11,6 @@ button {
 
 .menuButton:hover,
 .menuButton:focus {
-    border-color: none;
+    border-color: black;
     background-attachment: grey;
 }

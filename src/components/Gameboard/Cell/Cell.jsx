@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 
 import styles from './Cell.css';
 
+/** 
+ * Cell component that returns buttons with specific styles
+ * @component
+ * @param {number} alive number representing cell life cycle
+ * @param {func} onClick function executed on click
+ * @param {number} i index of the row
+ * @param {number} j index of column 
+*/
 function Cell({ alive, onClick, i, j }) {
   const aliveStyle = alive > 0 ? alive > 1 ? styles.born : styles.alive : '';
 
