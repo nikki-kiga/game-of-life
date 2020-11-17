@@ -1,21 +1,24 @@
 button {
     outline: none;
+    background: hsl(0, 0%, 10%);
 }
 .born {
-    background: #6dd9c1;
+    background: #FFB8FF;
 } 
 
 .alive {
-    background: #ffea85;
+    background: #ffB852;
 }
 
 .cell {
     padding: .5rem;
     cursor: pointer;
+    border-color: hsl(240, 50%, 37%);
+
 }
 
 .cell:hover,
 .cell:focus {
-    background: #097287;
+    background: hsl(180, 80%, 50%);
 }
 

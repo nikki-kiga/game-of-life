@@ -4,14 +4,14 @@ import Grid from './Grid/Grid';
 
 /** 
 * Gameboard component that has a menu and grid children
-* @component 
+* @component gameboard - has both menu and grid
 */
 const Gameboard = () => {
   return (
-    <>
+    <div style={{   display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Menu/>
       <Grid/>
-    </>
+    </div>
   );
 };
 

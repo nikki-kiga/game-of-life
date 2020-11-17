@@ -3,14 +3,20 @@ button {
 }
 
 .menuButton {
+    font-family: 'Chivo';
     background-color: transparent;
-    border-color: grey;
+    border-color: hsl(240, 50%, 37%);
+    color:#ffB852;
     border-radius: 0.1rem;
     margin: 0.15rem;
+    font-size: 1.25rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
 }
 
 .menuButton:hover,
 .menuButton:focus {
-    border-color: black;
+    background: hsl(240, 50%, 37%);
+    color: #FFB8FF;
     background-attachment: grey;
 }
