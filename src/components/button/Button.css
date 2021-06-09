@@ -20,3 +20,9 @@ button {
     color: #FFB8FF;
     background-attachment: grey;
 }
+
+.menuButton:disabled {
+    color: grey;
+    background: transparent;
+    border-color: grey;
+}

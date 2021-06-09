@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "homepage": "https://nikki-kiga.github.io/game-of-life",
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>src/setupTests.js"
@@ -16,6 +17,8 @@
     }
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "jest --verbose",
     "test:watch": "npm run test -- --watch",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
@@ -27,6 +30,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "babel-jest": "^26.6.3",
+    "gh-pages": "^3.1.0",
     "lodash.clonedeep": "^4.5.0",
     "normalize.css": "^8.0.1",
     "react": "^16.14.0",

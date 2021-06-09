@@ -1,9 +1,9 @@
 import React from 'react';
-import Gameboard from '../Gameboard/Gameboard';
-import Header from './Header';
+import Gameboard from './components/Gameboard/Gameboard';
+import Header from './components/Layout/Header';
 
 import styles from './app.css';
-import Footer from './Footer';
+import Footer from './components/Layout/Footer';
 
 export default function App() {
   return (
