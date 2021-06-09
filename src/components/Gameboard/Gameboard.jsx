@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../menu/Menu";
-import Grid from "./Grid/Grid";
+import Grid from "../grid/Grid";
 
 /**
  * Gameboard component that has a menu and grid children
