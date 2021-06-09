@@ -4,14 +4,10 @@ import { getGrid } from "../../gameSelectors";
 import Cell from "../cell/Cell";
 import styles from "./Grid.css";
 
-/**
- * @component Grid to display rows and columns of cells
- */
 const Grid = () => {
   const grid = useSelector(getGrid);
   const dispatch = useDispatch();
 
-  // Handles when an individual cell is clicked
   const handleClick = (i, j) => {
     dispatch({
       type: "ACTIVATE_CELL",
@@ -20,7 +16,6 @@ const Grid = () => {
     });
   };
 
-  // Map through the grid to create cell components
   const gridCells = grid.map((rows, i) =>
     rows.map((col, j) => (
       <Cell
