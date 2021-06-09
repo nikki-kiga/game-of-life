@@ -20,7 +20,7 @@ const Buttons = memo(({ name, disable, onClick }) => {
 
 Buttons.propTypes = {
   name: PropTypes.string.isRequired,
-  disable: PropTypes.bool.isRequired,
+  disable: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };
 
